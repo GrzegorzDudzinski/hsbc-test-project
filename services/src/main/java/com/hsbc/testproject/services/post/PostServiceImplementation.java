@@ -1,6 +1,8 @@
 package com.hsbc.testproject.services.post;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +37,11 @@ public class PostServiceImplementation implements PostService{
 		
 		try {
 			userService.checkUserExistance(user);
-			return postDAO.getUserPosts(user);
+			
+			List<Post> userPosts = postDAO.getUserPosts(user);
+			userPosts.sort(Comparator.comparing(Post::getPostTimestamp));
+			Collections.reverse(userPosts);
+			return userPosts;
 		} catch (UserException e) {
 			throw new PostException(NO_SUCH_USER, e);
 		} catch (PostDAOException e) {
@@ -74,6 +80,8 @@ public class PostServiceImplementation implements PostService{
 			for(User followedUser : userService.getUsersFollowedByUser(user))
 				followedPosts.addAll(getUserPosts(followedUser));
 			
+			followedPosts.sort(Comparator.comparing(Post::getPostTimestamp));
+			Collections.reverse(followedPosts);
 			return followedPosts;
 			
 		} catch (UserException e) {
