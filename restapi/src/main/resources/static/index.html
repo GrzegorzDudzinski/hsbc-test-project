@@ -1,0 +1,42 @@
+<h1>HSBC TestProject documentation</h1>
+
+<b>Posting</b><br>
+<ul>
+	<li>Method :  POST</li>
+	<li>Address: /rest/post</li>
+	<li>Body   : <br>
+		
+		{ <br>
+			"postMessage": "msg",<br>
+		  	"userLogin"  : "gdudzinski2"<br>
+		}<br>
+		
+		type: application/json
+	</li>
+</ul>
+
+<b>Wall</b><br>
+<ul>
+	<li>Method :  GET</li>
+	<li>Address:  /rest/posts/{login}</li>
+</ul>
+
+<b>Following</b><br>
+<ul>
+	<li>Method :  PUT</li>
+	<li>Address:  /rest/trackedUsers/{login}</li>
+	<li>Body   : <br>
+		
+		{ <br>
+		  	"login"  : "gdudzinski2"<br>
+		}<br>
+		
+		type: application/json
+	</li>
+</ul>
+
+<b>Timeline</b><br>
+<ul>
+	<li>Method :  GET</li>
+	<li>Address:  /rest/trackedPosts/{login}</li>
+</ul>
