@@ -8,7 +8,7 @@ public class Post {
 
 	private String userLogin;
 	private String postMessage;
-	private String postTimestamp = LocalDateTime.now().toString();
+	private LocalDateTime postTimestamp = LocalDateTime.now();
 	
 	public Post() {}
 	
@@ -36,12 +36,13 @@ public class Post {
 	public void setPostMessage(String postMessage) {
 		this.postMessage = postMessage;
 	}
+	
 
-	public String getPostTimestamp() {
+	public LocalDateTime getPostTimestamp() {
 		return postTimestamp;
 	}
 
-	public void setPostTimestamp(String postTimestamp) {
+	public void setPostTimestamp(LocalDateTime postTimestamp) {
 		this.postTimestamp = postTimestamp;
 	}
 
