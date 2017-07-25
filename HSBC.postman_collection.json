@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "HSBC",
+		"_postman_id": "a45ba537-eaa9-e363-274a-30672132b761",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dodaj post",
+			"request": {
+				"url": "localhost:8080/rest/post",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"postMessage\": \"msg\",\n\t\"userLogin\"  : \"gdudzinski\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Pokaż posty",
+			"request": {
+				"url": "localhost:8080/rest/post",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"postMessage\": \"msg\",\n\t\"userLogin\"  : \"gdudzinski\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Dodaj do śledzonych",
+			"request": {
+				"url": "localhost:8080/rest/post",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"postMessage\": \"msg\",\n\t\"userLogin\"  : \"gdudzinski\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Pokaż posty śledzonych",
+			"request": {
+				"url": "localhost:8080/rest/post",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"postMessage\": \"msg\",\n\t\"userLogin\"  : \"gdudzinski\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
